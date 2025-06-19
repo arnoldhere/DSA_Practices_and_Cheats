@@ -1,6 +1,6 @@
 # 🧠 DSA Roadmap & Practice – Arnold Macwan
 
-Welcome to my structured **Data Structures and Algorithms (DSA)** repository. This repo contains my personal journey of learning and mastering core computer science concepts for **placements**, **problem-solving**, and **competitive programming**.
+Welcome to my structured **Data Structures and Algorithms (DSA)** repository. This repo contains my personal journey of learning and mastering core computer science concepts for **placements**, **problem-solving**, **logic builiding** and **competitive programming**.
 
 > ✨ Well organized | 🚀 Optimized Solutions | 📘 Conceptual Notes
 
@@ -9,10 +9,12 @@ Welcome to my structured **Data Structures and Algorithms (DSA)** repository. Th
 ## 📌 Contents
 
 ### ✅ Topics Covered:
+
 - **Arrays**
-    - Quick Sort, Merge Sort/TwoWay Merge Sort
-    - Basic I/O, Traversal
-    - Linear Search, Binary Search 
+  - Quick Sort, Merge Sort/TwoWay Merge Sort
+  - Basic I/O, Traversal
+  - Insertion & Deletion of element
+  - Linear Search, Binary Search
 - **Linked Lists**
 - **Stacks & Queues**
 - **Recursion & Backtracking**
