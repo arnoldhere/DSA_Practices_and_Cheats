@@ -16,7 +16,7 @@
 - lack of flexibility
 - memory allocation issues
 
-## Applications and operations on arrays
+## Various Applications and operations on arrays
 
 - Basic I/O, Traversal
 - Search (linear, binary)

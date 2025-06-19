@@ -10,6 +10,9 @@ Welcome to my structured **Data Structures and Algorithms (DSA)** repository. Th
 
 ### ✅ Topics Covered:
 - **Arrays**
+    - Quick Sort, Merge Sort/TwoWay Merge Sort
+    - Basic I/O, Traversal
+    - Linear Search, Binary Search 
 - **Linked Lists**
 - **Stacks & Queues**
 - **Recursion & Backtracking**
@@ -26,21 +29,3 @@ Welcome to my structured **Data Structures and Algorithms (DSA)** repository. Th
 - **Disjoint Sets (Union-Find)** -->
 
 ---
-
-## 📁 Folder Structure
-
-```bash
-DSA-Roadmap-Arnold/
-├── Arrays/
-│   ├── merge_sort.cpp
-│   └── two_sum.py
-├── LinkedLists/
-│   └── reverse_linked_list.cpp
-├── Trees/
-│   └── dfs_inorder_traversal.js
-├── Graphs/
-│   └── bfs_dfs.cpp
-├── Notes/
-│   ├── sorting-cheatsheet.md
-│   └── time-space-complexity.md
-├── README.md
