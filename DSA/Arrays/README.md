@@ -1,5 +1,4 @@
 # Arrays
-
 - linear data structure
 - stores fixed size of elements in a sequential fashion in memory
 - elemenets are stored in consecutive memory location
