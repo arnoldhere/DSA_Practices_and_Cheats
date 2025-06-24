@@ -1,6 +1,6 @@
 # 🧠 DSA Roadmap & Practice – Arnold Macwan
 
-Welcome to my structured **Data Structures and Algorithms (DSA)** repository. This repo contains my personal journey of learning and mastering core computer science concepts for **placements**, **problem-solving**, **logic building** and **competitive programming**.
+Welcome to my structured **Data Structures and Algorithms (DSA)** repository. This repo contains my personal journey of learning  core computer science concepts for **placements**, **problem-solving**, **logic building** and **competitive programming**.
 
 > ✨ Well organized | 🚀 Optimized Solutions | 📘 Conceptual Notes
 
