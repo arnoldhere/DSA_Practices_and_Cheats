@@ -54,11 +54,50 @@
    ```
 
 3. Circular
-    - Not more used practicaly 
-    - can loop infinitely
-    - great for round-robin cpu process
-    - tricky and complex to implement
+   - Not more used practicaly
+   - can loop infinitely
+   - great for round-robin cpu process
+   - tricky and complex to implement
    - structure
    ```
        [head|data|tail] ⇄ [head|data|tail] ⇄ [head|data|tail ] -> back to 1st node
    ```
+
+## Basic operations with algorithm for Linked lists
+
+- Creation
+  [Add a new node at the end of the list (standard creation flow).]
+
+```
+CreateNode(data)
+START
+    allocate new memory -> new_node
+    new_node.data = data
+    new_node.next = null
+
+    IF head is NULL
+        head =new_node       // first node
+    ELSE
+        tmp<-head
+            while tmp.next != NULL
+                tmp=tmp.next
+            ENDWHILE
+        tmp.next = new_node // attach at end
+    ENDIF
+END
+```
+
+- Display
+
+```
+DisplayLL
+    START
+        IF head is NULL
+            Linked list is empty
+        ENDIF
+        tmp = head
+        while tmp!= null
+            print ->  tmp.data
+        ENDWHILE
+    END
+```
