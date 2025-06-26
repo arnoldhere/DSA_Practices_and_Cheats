@@ -107,10 +107,39 @@ START
 END
 ```
 
+- Creation of node at specific location
+
+```
+CreateAtPos(data,pos)
+START
+    allocate new memory -> new_node
+    new_node.data = data
+    new_node.next = null
+    IF head is null
+        head = new_node // first mode
+    ELSE
+        IF pos = 1
+            new_node.nxt <-head
+            head.nxt <- new_node
+        ENDIF
+        // traverse just before the position entered and adjust the links in between
+        tmp <- head
+        FOR 1 to pos-1
+            IF tmp = null
+                invalid location
+                return
+            ENDIF
+            tmp = tmp.nxt
+        ENDFOR
+        new_node.nxt = tmp.nxt
+        tmp.nxt = new_node
+    ENDIF
+END
+```
+
 - Display
 
 ```
-
 DisplayLL
 START
 IF head is NULL
@@ -121,9 +150,5 @@ while tmp!= null
 print -> tmp.data
 ENDWHILE
 END
-
-```
-
-```
 
 ```

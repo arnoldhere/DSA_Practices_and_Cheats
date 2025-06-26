@@ -29,6 +29,22 @@ void menu()
     cout << "================================\n";
 }
 
+void display()
+{
+    if (head == nullptr)
+        cout << "Linked List is empty..." << endl;
+    else
+    {
+        Node *current = head;
+        while (current != nullptr)
+        {
+            cout << current->data << "->";
+            current = current->nxt;
+        }
+        cout << "null" << endl;
+    }
+}
+
 int main()
 {
     int ch;
@@ -41,18 +57,7 @@ int main()
         switch (ch)
         {
         case 1: // display the LL
-            if (head == nullptr)
-                cout << "Linked List is empty..." << endl;
-            else
-            {
-                Node *tmp = head;
-                while (tmp != nullptr)
-                {
-                    cout << tmp->data << "->";
-                    tmp = tmp->nxt;
-                }
-                cout << "null" << endl;
-            }
+            display();
             break;
         case 2:
             int ich;
@@ -80,12 +85,12 @@ int main()
                     }
                     else
                     {
-                        Node *t = head;
-                        while (t->nxt != nullptr)
+                        Node *current = head;
+                        while (current->nxt != nullptr)
                         {
-                            t = t->nxt;
+                            current = current->nxt;
                         }
-                        t->nxt = n;
+                        current->nxt = n;
                     }
                     count++;
                     break;
@@ -107,8 +112,45 @@ int main()
                     count++;
                     break;
                 }
-                else if (ich == 3)
+                else if (ich == 3) // add the node at specific location
                 {
+                    int pos, x;
+                    display();
+                    cout << "Enter the value to be inserted :";
+                    cin >> x;
+                    cout << "Enter the position :";
+                    cin >> pos;
+                    Node *n = new Node(x);
+                    if (pos < 1 || pos > count + 1)
+                    {
+                        cout << "❌ Invalid position! Out of bounds.\n";
+                        break;
+                    }
+
+                    // If inserting at the head
+                    if (pos == 1)
+                    {
+                        n->nxt = head;
+                        head = n;
+                        count++;
+                        break;
+                    }
+
+                    Node *current = head;
+
+                    // Traverse to node at pos - 1
+                    for (int i = 1; i < pos - 1; i++)
+                    {
+                        if (current == nullptr)
+                        {
+                            cout << "invalid postion";
+                            break;
+                        }
+                        current = current->nxt;
+                    }
+                    n->nxt = current->nxt; // Link new node to next node
+                    current->nxt = n;      // Link previous node to new node
+                    count++;
                     break;
                 }
                 else if (ich == 4)
@@ -127,6 +169,8 @@ int main()
         case 4:
             break;
         case 5:
+            cout << "Total nodes in the LinkedList is " << count << endl;
+            display();
             break;
         case 6:
             break;
