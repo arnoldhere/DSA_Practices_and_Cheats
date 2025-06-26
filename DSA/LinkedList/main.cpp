@@ -51,7 +51,7 @@ int main()
                     cout << tmp->data << "->";
                     tmp = tmp->nxt;
                 }
-                cout << "null"<<endl;
+                cout << "null" << endl;
             }
             break;
         case 2:
@@ -64,9 +64,9 @@ int main()
                 cout << "[3] insert at choice" << endl;
                 cout << "[4] EXIT" << endl;
                 cout << "==================" << endl;
-                cout << "choose option";
+                cout << "choose option : ";
                 cin >> ich;
-                if (ich == 1)
+                if (ich == 1) // add node at the end
                 {
                     int x;
                     cout << "Enter the value here :";
@@ -90,8 +90,21 @@ int main()
                     count++;
                     break;
                 }
-                else if (ich == 2)
+                else if (ich == 2) // add node at the start
                 {
+                    int x;
+                    cout << "Enter the value to be inserted :";
+                    cin >> x;
+                    Node *n = new Node(x);
+                    if (head == nullptr)
+                        cout << "Linked List is empty....";
+                    else
+                    {
+                        // attach new node at head and give memory address of old head to new head
+                        n->nxt = head;
+                        head = n;
+                    }
+                    count++;
                     break;
                 }
                 else if (ich == 3)

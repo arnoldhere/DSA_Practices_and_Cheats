@@ -87,17 +87,43 @@ START
 END
 ```
 
+- Creation of node at start
+
+```
+CreateNodeAtstart(data)
+START
+    allocate new memory -> new_node
+    new_node.data = data
+    new_node.next = null
+
+    IF head is NULL
+        head =new_node       // first node
+    ELSE
+        // attach new node at head and give memory address of old head to new head
+        new_node.nxt <-head
+        head.nxt <- new_node
+   ENDIF
+
+END
+```
+
 - Display
 
 ```
+
 DisplayLL
-    START
-        IF head is NULL
-            Linked list is empty
-        ENDIF
-        tmp = head
-        while tmp!= null
-            print ->  tmp.data
-        ENDWHILE
-    END
+START
+IF head is NULL
+Linked list is empty
+ENDIF
+tmp = head
+while tmp!= null
+print -> tmp.data
+ENDWHILE
+END
+
+```
+
+```
+
 ```
